@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title> <!--Title of the page-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Search</h1> <!--Will give title to the form -->
+
+    <div class="form">
+        <form action="/review" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Search"> <!-- 'submit' will submit whatever i.e searched to the backend .py code -->
+        </form>
+    </div>
+</div>
+{% endblock %}
